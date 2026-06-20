@@ -2,20 +2,29 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
+
   return (
-    <div style={{ textAlign: 'center', padding: '50px' }}>
-      <h1>iPhone 12 and iPhone 12 mini</h1>
-      <p>Blast past fast. A superpowerful chip. 5G speed.</p>
-      {/* ფოტოს ჩასმა - სურათი ჩააგდე public ფოლდერში */}
-      <img src="/iphone12.png" alt="iPhone 12" style={{ width: '400px' }} />
-      <br />
-      <button 
-        onClick={() => navigate('/users')}
-        style={{ padding: '10px 20px', marginTop: '20px', cursor: 'pointer' }}
-      >
-        Buy Now (See Users)
-      </button>
+    <div className="home-container">
+      <div className="text-section">
+        <h1>Welcome to TechSpace</h1>
+        <p>
+          We build the digital future. Discover our amazing community of developers 
+          and tech enthusiasts from all around the world. Join us today and start your journey.
+        </p>
+        <button className="primary-btn" onClick={() => navigate('/users')}>
+          Meet Our Users
+        </button>
+      </div>
+
+      <div className="image-section">
+        {/* ფოტოს პირდაპირი ლინკი, გადმოწერა არ გჭირდება! */}
+        <img 
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+          alt="Team Working" 
+        />
+      </div>
     </div>
   );
 };
+
 export default Home;

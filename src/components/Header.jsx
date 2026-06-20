@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 
-const Header = () => (
-  <header style={{ padding: '15px', background: '#333', color: '#fff', display: 'flex', gap: '20px' }}>
-    <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</Link>
-    <Link to="/users" style={{ color: '#fff', textDecoration: 'none' }}>Users</Link>
-  </header>
-);
+const Header = () => {
+  return (
+    <header className="main-header">
+      <Link to="/" className="logo">TechSpace</Link>
+      <nav className="nav-links">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/users" className="nav-link">Users</Link>
+      </nav>
+    </header>
+  );
+};
+
 export default Header;
