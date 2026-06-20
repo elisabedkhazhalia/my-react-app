@@ -8,10 +8,12 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-      </Routes>
+      <main style={{ minHeight: '80vh' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   );
